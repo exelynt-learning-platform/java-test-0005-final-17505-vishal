@@ -1,0 +1,16 @@
+ class ConcentricSquare {
+    public static void main(String[] args) {
+        int n = 7; 
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                int top    = i;
+                int left   = j;
+                int bottom = (n - 1) - i;
+                int right  = (n - 1) - j;
+                int minDist = Math.min(Math.min(top, bottom), Math.min(left, right));
+                System.out.print((n / 2 + 1) - minDist);
+            }
+            System.out.println(); 
+        }
+    }
+}
